@@ -1,6 +1,8 @@
 <template>
   <div>
-    <span>test 01</span>
+    <div class="con">
+      <span>test 01</span>
+    </div>
   </div>
 </template>
 <script>
@@ -10,5 +12,4 @@ export default {
 </script>
 
 <style>
-
 </style>

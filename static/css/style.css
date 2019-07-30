@@ -2,13 +2,21 @@ html, body{
   margin: 0;
   padding: 0;
   height: 100%;
+  font-size: 14px;
 }
 a{
   text-decoration: none;
   color: #fff;
 }
 .container{
-  padding-left: 210px;
+  position: relative;
+  /* padding-left: 210px; */
   height: 100%;
   background: #f0f2f5;
+  overflow-y: auto;
+}
+.con{
+  height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
 }

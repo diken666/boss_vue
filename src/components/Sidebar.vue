@@ -14,13 +14,11 @@
 
 <script>
 export default {
-  name: 'Sidebar',
-  mounted(){
-  }
+  name: 'Sidebar'
 }
 </script>
 
-<style>
+<style lang='scss'>
  .sidebar{
     float: left;
     width: 210px;
@@ -33,31 +31,33 @@ export default {
   .item{
     position: relative;
     display: block;
-    height: 56px;
-    line-height: 56px;
+    height: 40px;
+    line-height: 40px;
     padding-left: 30px;
     cursor: pointer;
     user-select: none;
-  }
-  .item:hover{
-    background: #263445;
-  }
-  .item i{
-    display: inline-block;
-    position: relative;
-    top: -2px;
-    width: 15px;
-    height: 15px;
-    margin-right: 10px;
-    background: url(../../static/image/look.png) no-repeat;
-    background-size: 15px 15px;
-    vertical-align: middle;
+
+    &:hover{
+      background: #263445;
+    }
+    & i{
+      display: inline-block;
+      position: relative;
+      top: -2px;
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+      background: url(../../static/image/look.png) no-repeat;
+      background-size: 15px 15px;
+      vertical-align: middle;
+    }
   }
   .router-link-exact-active{
     color: #1890ff;
-  }
-  .router-link-exact-active i{
-    background: url(../../static/image/look_blue.png) no-repeat;
-    background-size: 15px 15px;
+
+    & i{
+      background: url(../../static/image/look_blue.png) no-repeat;
+      background-size: 15px 15px;
+    }
   }
 </style>
