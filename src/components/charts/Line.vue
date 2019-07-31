@@ -1,11 +1,17 @@
 <template>
-  <div id='mychart'></div>
+  <div class='chart-con'>
+    <div id='mychart'></div>
+  </div>
 </template>
-
 <script>
 import echarts from 'echarts'
 export default {
   name: 'lineChart',
+  data() {
+    return {
+      title: 'Gradient along the y axis'
+    }
+  },
   mounted() {
     this.drawLine()
   },
@@ -13,8 +19,13 @@ export default {
     drawLine() {
       let myChart = echarts.init(document.getElementById('mychart'))
       myChart.setOption({
-          tooltip : {
-          trigger: 'axis',
+          title: {
+            top: '5%',
+            left: 'center',
+            text: this.title
+          },
+          tooltip: {
+            trigger: 'axis',
             axisPointer: {
                 type: 'cross',
                 label: {
@@ -35,16 +46,21 @@ export default {
               type: 'line',
               areaStyle: {}
           }]
-      });
+      })
     }
   }
 }
 </script>
 
 <style lang='scss' scoped>
-#mychart{
+.chart-con{
   width: 400px;
   height: 300px;
+  background: #fff;
+}
+#mychart{
+  width: 100%;
+  height: 100%;
 }
 </style>
 

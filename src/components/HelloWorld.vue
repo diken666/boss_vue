@@ -4,13 +4,15 @@
       <!-- <span>时间线</span> -->
       <TimeLine/>
       <LineChart/>
+      <Pine/>
     </div>
   </div>
 </template>
 
 <script>
 import TimeLine from '@/components/index/TimeLine'
-import LineChart from '@/components/charts/lineChart'
+import LineChart from '@/components/charts/Line'
+import Pine from '@/components/charts/Pine'
 export default {
   name: 'HelloWorld',
   data () {
@@ -35,7 +37,8 @@ export default {
 
   components: {
     TimeLine,
-    LineChart
+    LineChart,
+    Pine
   }
 }
 </script>
